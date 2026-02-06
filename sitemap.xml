@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://www.ucap.dev/</loc>
+         <loc>https://ucap.dev/</loc>
          <lastmod>2026-02-06</lastmod>
     </url>
     <url>
-         <loc>https://www.ucap.dev/documentation/conformance/</loc>
+         <loc>https://ucap.dev/documentation/conformance/</loc>
          <lastmod>2026-02-06</lastmod>
     </url>
     <url>
-         <loc>https://www.ucap.dev/documentation/core-concepts/</loc>
+         <loc>https://ucap.dev/documentation/core-concepts/</loc>
          <lastmod>2026-02-06</lastmod>
     </url>
     <url>
-         <loc>https://www.ucap.dev/specification/catalog-lookup/</loc>
+         <loc>https://ucap.dev/specification/catalog-lookup/</loc>
          <lastmod>2026-02-06</lastmod>
     </url>
     <url>
-         <loc>https://www.ucap.dev/specification/catalog-search/</loc>
+         <loc>https://ucap.dev/specification/catalog-search/</loc>
          <lastmod>2026-02-06</lastmod>
     </url>
     <url>
-         <loc>https://www.ucap.dev/specification/catalog/</loc>
+         <loc>https://ucap.dev/specification/catalog/</loc>
          <lastmod>2026-02-06</lastmod>
     </url>
     <url>
-         <loc>https://www.ucap.dev/specification/content-access/</loc>
+         <loc>https://ucap.dev/specification/content-access/</loc>
          <lastmod>2026-02-06</lastmod>
     </url>
     <url>
-         <loc>https://www.ucap.dev/specification/content-discovery/</loc>
+         <loc>https://ucap.dev/specification/content-discovery/</loc>
          <lastmod>2026-02-06</lastmod>
     </url>
     <url>
-         <loc>https://www.ucap.dev/specification/identity-linking/</loc>
+         <loc>https://ucap.dev/specification/identity-linking/</loc>
          <lastmod>2026-02-06</lastmod>
     </url>
     <url>
-         <loc>https://www.ucap.dev/specification/mcp-integration/</loc>
+         <loc>https://ucap.dev/specification/mcp-integration/</loc>
          <lastmod>2026-02-06</lastmod>
     </url>
     <url>
-         <loc>https://www.ucap.dev/specification/overview/</loc>
+         <loc>https://ucap.dev/specification/overview/</loc>
          <lastmod>2026-02-06</lastmod>
     </url>
     <url>
-         <loc>https://www.ucap.dev/specification/payment-flow/</loc>
+         <loc>https://ucap.dev/specification/payment-flow/</loc>
          <lastmod>2026-02-06</lastmod>
     </url>
     <url>
-         <loc>https://www.ucap.dev/specification/reference/</loc>
+         <loc>https://ucap.dev/specification/reference/</loc>
          <lastmod>2026-02-06</lastmod>
     </url>
     <url>
-         <loc>https://www.ucap.dev/specification/subscription/</loc>
+         <loc>https://ucap.dev/specification/subscription/</loc>
          <lastmod>2026-02-06</lastmod>
     </url>
 </urlset>
