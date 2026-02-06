@@ -1,3 +1,8 @@
+---
+title: Reference
+description: UCAP reference — authentication headers, security considerations, error codes, capability IDs, ID formats, and context field definitions.
+---
+
 # Reference
 
 This page consolidates authentication details, security considerations, error codes, and format references for the UCAP specification.

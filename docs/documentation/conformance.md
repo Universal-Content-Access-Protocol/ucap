@@ -1,3 +1,8 @@
+---
+title: Conformance
+description: Requirements for conformant UCAP servers and agents, including MUST, SHOULD, and MAY requirements across Basic, Standard, and Full conformance levels.
+---
+
 # Conformance
 
 This section defines the requirements for conformant UCAP servers and agents.

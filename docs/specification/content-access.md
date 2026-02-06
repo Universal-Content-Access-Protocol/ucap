@@ -1,3 +1,8 @@
+---
+title: Content Access Capability
+description: UCAP Content Access capability specification — fetch paywalled content with automatic entitlement checking via HTTP API.
+---
+
 # Content Access Capability
 
 * **Capability Name:** `dev.ucap.content.access`

@@ -1,3 +1,8 @@
+---
+title: MCP Integration
+description: UCAP MCP (Model Context Protocol) integration — tool definitions for search, lookup, read, subscribe, and entitlements for AI agents.
+---
+
 # MCP Integration
 
 UCAP servers **MAY** expose functionality via MCP (Model Context Protocol) for AI agents. MCP provides a natural integration point for AI assistants like Claude.

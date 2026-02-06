@@ -1,3 +1,8 @@
+---
+title: Content Discovery
+description: UCAP content discovery mechanisms — well-known endpoint for publisher detection, global registry, and publisher registration requirements.
+---
+
 # Content Discovery
 
 Content discovery enables agents to find UCAP-enabled publishers and content sources. UCAP provides two discovery mechanisms: a well-known endpoint for individual publishers and a global registry for cross-publisher discovery.

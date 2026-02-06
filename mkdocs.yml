@@ -11,6 +11,7 @@ copyright: Copyright &copy; 2026 UCAP Contributors
 
 theme:
   name: material
+  custom_dir: docs/overrides
   logo: assets/logo.svg
   font:
     text: Google Sans
@@ -85,6 +86,7 @@ markdown_extensions:
 
 plugins:
   - search
+  - social
 
 nav:
   - Home: index.md

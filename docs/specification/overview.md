@@ -1,3 +1,8 @@
+---
+title: Specification Overview
+description: UCAP specification overview covering protocol capabilities, transport bindings, versioning, and design conventions.
+---
+
 # Specification Overview
 
 **Version:** 1.1.0-draft

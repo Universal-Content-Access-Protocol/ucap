@@ -1,3 +1,8 @@
+---
+title: Catalog Lookup
+description: UCAP Catalog Lookup specification — retrieve publications or posts by ID with support for multiple ID formats and error handling.
+---
+
 # Catalog Lookup
 
 * **Capability Name:** `dev.ucap.content.catalog.lookup`

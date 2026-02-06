@@ -1,3 +1,8 @@
+---
+title: Core Concepts
+description: Understand UCAP's design goals, roles, terminology, content access model, and how it fits into the protocol stack alongside UCP and OpenBotAuth.
+---
+
 # Core Concepts
 
 The Universal Content Access Protocol (UCAP) is an open protocol that enables AI agents and automated systems to discover, access, and subscribe to long-form content from publishers. Built on HTTP with OpenBotAuth for agent authentication, UCAP provides a standardized way for agents to interact with paywalled content, handle subscription purchases, and access entitled content — all while keeping humans in control of payment decisions.

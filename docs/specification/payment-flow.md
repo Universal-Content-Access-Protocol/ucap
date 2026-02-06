@@ -1,3 +1,8 @@
+---
+title: Payment Flow
+description: UCAP human-in-the-loop payment flow — how agents present checkout URLs, humans complete payment, and entitlements are minted.
+---
+
 # Payment Flow
 
 UCAP uses a human-in-the-loop payment model. Agents cannot execute payments autonomously — except when using cryptocurrency (USDC on Base) where agents can pay directly.

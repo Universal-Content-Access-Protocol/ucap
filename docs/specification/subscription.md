@@ -1,3 +1,8 @@
+---
+title: Subscription Capability
+description: UCAP Subscription capability specification — create subscriptions, manage entitlements, and handle payment checkout flows.
+---
+
 # Subscription Capability
 
 * **Capability Name:** `dev.ucap.content.subscription`

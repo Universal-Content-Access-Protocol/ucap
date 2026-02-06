@@ -1,3 +1,8 @@
+---
+title: Identity Linking Capability
+description: UCAP Identity Linking specification — OAuth 2.0 flow to link agent identity to user accounts for delegated content access.
+---
+
 # Identity Linking Capability
 
 * **Capability Name:** `dev.ucap.content.identity`

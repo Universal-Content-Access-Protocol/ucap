@@ -1,3 +1,8 @@
+---
+title: Catalog Search
+description: UCAP Catalog Search specification — free-text search across publishers and posts with filters, context, pagination, and MCP binding.
+---
+
 # Catalog Search
 
 * **Capability Name:** `dev.ucap.content.catalog.search`

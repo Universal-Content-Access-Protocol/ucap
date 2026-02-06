@@ -3,6 +3,11 @@ title: Universal Content Access Protocol (UCAP)
 description: An open protocol enabling AI agents to discover, access, and subscribe to long-form content from publishers.
 hide:
   - toc
+tags:
+  - UCAP
+  - AI agents
+  - content access
+  - open protocol
 ---
 
 <div class="ucap-hero" markdown>

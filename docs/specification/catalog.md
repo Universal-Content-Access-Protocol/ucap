@@ -1,3 +1,8 @@
+---
+title: Catalog Capability
+description: UCAP Catalog capability overview — data structures for publications, posts, and context objects, plus planned extensions.
+---
+
 # Catalog Capability
 
 The Catalog capability enables agents to discover publishers and search content before accessing it. This fills the "discovery gap" — while Content Access assumes you already have a post ID, the Catalog enables scenarios like *"find me AI newsletters under $10/month"* that lead to subscription and access.
