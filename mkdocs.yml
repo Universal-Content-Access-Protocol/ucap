@@ -19,7 +19,6 @@ theme:
     - navigation.instant
     - navigation.instant.progress
     - navigation.tracking
-    - navigation.tabs
     - navigation.sections
     - navigation.expand
     - navigation.indexes
@@ -46,6 +45,9 @@ theme:
 extra:
   ucap_version: "1.1.0-draft"
   ucap_url: https://www.ucap.dev
+  version:
+    provider: mike
+    default: latest
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/Universal-Content-Access-Protocol/ucap
