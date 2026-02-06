@@ -19,12 +19,6 @@ jobs:
         with:
           python-version: '3.12'
 
-      - run: pip install "mkdocs-material[imaging]" mike
+      - run: pip install "mkdocs-material[imaging]"
 
-      - run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-      - run: |
-          mike deploy --push --update-aliases 2026-02-06 latest
-          mike set-default --push latest
+      - run: mkdocs gh-deploy --force

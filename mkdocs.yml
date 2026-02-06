@@ -1,5 +1,5 @@
 site_name: Universal Content Access Protocol (UCAP)
-site_url: https://www.ucap.dev/latest/
+site_url: https://www.ucap.dev/
 site_description: >-
   An open protocol enabling AI agents and automated systems to discover,
   access, and subscribe to long-form content from publishers.
@@ -48,7 +48,7 @@ extra:
   ucap_url: https://www.ucap.dev
   version:
     provider: mike
-    default: latest
+    alias: true
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/Universal-Content-Access-Protocol/ucap
