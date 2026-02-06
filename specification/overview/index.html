@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An open protocol enabling AI agents and automated systems to discover, access, and subscribe to long-form content from publishers.">
+        <meta name="description" content="UCAP specification overview covering protocol capabilities, transport bindings, versioning, and design conventions.">
       
       
       
@@ -27,7 +27,7 @@
     
     
       
-        <title>Overview - Universal Content Access Protocol (UCAP)</title>
+        <title>Specification Overview - Universal Content Access Protocol (UCAP)</title>
       
     
     
@@ -61,7 +61,31 @@
 
     
     
-  </head>
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Overview - Universal Content Access Protocol (UCAP)">
+  <meta property="og:description" content="UCAP specification overview covering protocol capabilities, transport bindings, versioning, and design conventions.">
+  <meta property="og:url" content="https://www.ucap.dev/specification/overview/">
+  <meta property="og:site_name" content="Universal Content Access Protocol (UCAP)">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Overview - Universal Content Access Protocol (UCAP)">
+  <meta name="twitter:description" content="UCAP specification overview covering protocol capabilities, transport bindings, versioning, and design conventions.">
+
+
+  
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Specification Overview - Universal Content Access Protocol (UCAP)" />
+<meta property="og:description" content="UCAP specification overview covering protocol capabilities, transport bindings, versioning, and design conventions." />
+<meta property="og:image" content="https://www.ucap.dev/assets/images/social/specification/overview.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://www.ucap.dev/specification/overview/" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="Specification Overview - Universal Content Access Protocol (UCAP)" />
+<meta property="twitter:description" content="UCAP specification overview covering protocol capabilities, transport bindings, versioning, and design conventions." />
+<meta property="twitter:image" content="https://www.ucap.dev/assets/images/social/specification/overview.png" />
+</head>
   
   
     
@@ -89,10 +113,16 @@
       
     </div>
     
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Universal Content Access Protocol (UCAP)" class="md-header__button md-logo" aria-label="Universal Content Access Protocol (UCAP)" data-md-component="logo">
       
@@ -113,7 +143,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              Specification Overview
             
           </span>
         </div>
@@ -215,96 +245,6 @@
       
         
           
-            
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
-        
-  
-  
-    
-  
-  Home
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../documentation/core-concepts/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Core Concepts
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    
-  
-  
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
-          
-  
-  
-    
-  
-  Specification
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../documentation/conformance/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  Conformance
-
-      </a>
-    </li>
-  
-
-      
-    </ul>
-  </div>
-</nav>
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -318,10 +258,8 @@
                     
 
 
-  
 
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Universal Content Access Protocol (UCAP)" class="md-nav__button md-logo" aria-label="Universal Content Access Protocol (UCAP)" data-md-component="logo">
       
@@ -433,9 +371,6 @@
     
       
         
-        
-      
-      
         
       
     
@@ -709,15 +644,9 @@
     
     
       
-      
-        
-          
-          
-        
-      
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -726,7 +655,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
             
   
   
@@ -1328,6 +1257,9 @@
 
 
 
+  
+  
+
 
 
 
@@ -1400,7 +1332,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
