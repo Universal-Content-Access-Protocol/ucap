@@ -1,0 +1,103 @@
+site_name: Universal Content Access Protocol (UCAP)
+site_url: https://ucap.dev/
+site_description: >-
+  An open protocol enabling AI agents and automated systems to discover,
+  access, and subscribe to long-form content from publishers.
+
+repo_url: https://github.com/Universal-Content-Access-Protocol/ucap
+repo_name: UCAP on GitHub
+
+copyright: Copyright &copy; 2026 UCAP Contributors
+
+theme:
+  name: material
+  logo: assets/logo.svg
+  font:
+    text: Google Sans
+    code: Roboto Mono
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+    - toc.follow
+  palette:
+    - scheme: default
+      primary: white
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra:
+  ucap_version: "1.1.0-draft"
+  ucap_url: https://ucap.dev
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Universal-Content-Access-Protocol/ucap
+
+extra_css:
+  - stylesheets/custom.css
+
+markdown_extensions:
+  - meta
+  - footnotes
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Core Concepts: documentation/core-concepts.md
+  - Specification:
+      - Overview: specification/overview.md
+      - Content Access Capability: specification/content-access.md
+      - Catalog Capability:
+          - Overview: specification/catalog.md
+          - Catalog Search: specification/catalog-search.md
+          - Catalog Lookup: specification/catalog-lookup.md
+      - Subscription Capability: specification/subscription.md
+      - Identity Linking Capability: specification/identity-linking.md
+      - Payment Flow: specification/payment-flow.md
+      - MCP Integration: specification/mcp-integration.md
+      - Content Discovery: specification/content-discovery.md
+      - Reference: specification/reference.md
+  - Conformance: documentation/conformance.md
