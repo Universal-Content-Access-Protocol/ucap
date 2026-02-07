@@ -59,6 +59,7 @@ Publishers register with a UCAP server to make their content available to agents
 |-------------|-------------|
 | Content Source | Connection to content platform (API, export, etc.) |
 | Tier Configuration | Mapping of content tiers to prices |
+| Teaser Configuration | Teaser mode (`auto` or `manual`) and default word count (see [Publisher Teasers](catalog.md#publisher-teasers)) |
 | Payment Setup | Payment processor connection (Stripe, etc.) |
 
 ### Supported Content Sources
@@ -80,6 +81,7 @@ UCAP is source-agnostic. Common integrations include:
 - Publishers **SHOULD** expose the `/.well-known/ucap.json` discovery document
 - Publishers **MUST** configure at least one content tier
 - Publishers **SHOULD** provide complete metadata (description, category, media) for catalog listing
+- Publishers **SHOULD** configure [teasers](catalog.md#publisher-teasers) for paywalled content to maximize discoverability by agents
 - Publishers **MAY** support multiple content sources
 
 ### For Agents

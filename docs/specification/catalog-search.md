@@ -106,6 +106,29 @@ Free-text search across publishers and posts with filters, context, and paginati
             }
           },
           "relevance_score": 0.95
+        },
+        {
+          "type": "post",
+          "post": {
+            "id": "post_xyz789",
+            "title": "GPT-5: What We Know So Far",
+            "excerpt": "An analysis of the leaked benchmarks and what they mean.",
+            "teaser": {
+              "text": "The leaked GPT-5 benchmarks reveal significant jumps in reasoning, code generation, and multi-step planning. In this deep dive, we analyze what the numbers actually mean, compare them to Claude 4 and Gemini Ultra, and explore what this signals for the broader AI industry...",
+              "word_count": 150,
+              "format": "text"
+            },
+            "published_at": "2026-02-05T10:00:00Z",
+            "min_tier": "tier_pro",
+            "category": ["analysis", "gpt"],
+            "word_count": 2500,
+            "reading_time_minutes": 12
+          },
+          "publication": {
+            "id": "pub_ai-digest",
+            "title": "AI Digest Weekly"
+          },
+          "relevance_score": 0.88
         }
       ],
       "pagination": {
@@ -142,6 +165,7 @@ Free-text search across publishers and posts with filters, context, and paginati
 | `results[]` | array | Array of search results |
 | `results[].type` | string | Result type: `"publication"` or `"post"` |
 | `results[].publication` | object | Publication data (see [Catalog Overview](catalog.md#publication)) |
+| `results[].post` | object | Post data with teaser (see [Catalog Overview](catalog.md#post)) |
 | `results[].relevance_score` | number | Relevance score (0.0–1.0) |
 | `pagination.total` | integer | Total number of results |
 | `pagination.limit` | integer | Results per page |
@@ -177,9 +201,11 @@ See [MCP Integration](mcp-integration.md) for the full MCP tool definition.
 - Servers **MUST** return results sorted by relevance when a query is provided
 - Servers **MAY** use the `context.intent` field to improve search relevance
 - Servers **MUST** respect `pagination.limit` (max 25 per page)
+- Servers **SHOULD** include [teasers](catalog.md#publisher-teasers) in post results when available — teasers give agents the context needed to rank and present results effectively
 
 ### For Agents
 
 - Agents **SHOULD** provide the `context` object for better search results
 - Agents **SHOULD** use the `intent` field to describe the semantic goal of the search
+- Agents **SHOULD** use teaser content to evaluate relevance before recommending content or initiating access
 - Agents **MAY** cache search results for improved performance

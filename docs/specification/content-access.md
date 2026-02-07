@@ -79,6 +79,9 @@ Retrieve a single piece of content. The server verifies the agent's identity and
       "teaser": {
         "title": "Premium Article Title",
         "excerpt": "First 200 characters of the article...",
+        "text": "The leaked GPT-5 benchmarks reveal significant jumps in reasoning, code generation, and multi-step planning. In this deep dive, we analyze what the numbers actually mean, compare them to Claude 4 and Gemini Ultra, and explore what this signals for the broader AI industry...",
+        "word_count": 150,
+        "format": "text",
         "author": "Creator Name",
         "published_at": "2026-02-01T10:00:00Z"
       },
@@ -149,6 +152,20 @@ Retrieve a single piece of content. The server verifies the agent's identity and
 | `license` | string | Content license (e.g., `CC-BY-4.0`) |
 | `format` | string | Suggested attribution format string |
 
+### Teaser Object (402 Response)
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `title` | string | Post title |
+| `excerpt` | string | Short preview blurb (1–2 sentences) |
+| `text` | string | Publisher-authored preview content (see [Teasers](catalog.md#publisher-teasers)) |
+| `word_count` | integer | Number of words in the teaser text |
+| `format` | string | Teaser text format: `text`, `html`, `markdown` |
+| `author` | string | Author name |
+| `published_at` | string | Publication timestamp (RFC 3339) |
+
+The `text` field provides a substantial publisher-authored preview that gives agents enough context to evaluate the content's relevance. See [Publisher Teasers](catalog.md#publisher-teasers) for details on how publishers configure teasers.
+
 ### Offer Object (402 Response)
 
 | Field | Type | Description |
@@ -175,7 +192,7 @@ Retrieve a single piece of content. The server verifies the agent's identity and
 
 - Servers **MUST** verify HTTP Message Signatures ([RFC 9421](https://datatracker.ietf.org/doc/html/rfc9421){ target="_blank" }) before returning content
 - Servers **MUST** return 402 with at least one offer for paywalled content
-- Servers **SHOULD** include a `teaser` with title and excerpt in 402 responses
+- Servers **SHOULD** include a `teaser` with title, excerpt, and publisher-authored preview text in 402 responses
 - Servers **SHOULD** include `attribution` requirements in 200 responses
 - Servers **MAY** support content access by original URL via the `?url=` query parameter
 

@@ -53,7 +53,8 @@ A post represents a single piece of content (analogous to UCP's `Variant`).
 | `id` | string | Post identifier (used as `post_id` in content access) |
 | `external_id` | string | Source platform ID (e.g., Patreon post ID) |
 | `title` | string | Post title |
-| `excerpt` | string | Preview text |
+| `excerpt` | string | Short preview blurb (1–2 sentences) |
+| `teaser` | object | Publisher-authored content preview (see [Teasers](#publisher-teasers)) |
 | `published_at` | string | Publication timestamp (RFC 3339) |
 | `min_tier` | string | Minimum tier required for access |
 | `category` | string/array | Post category or tags |
@@ -83,6 +84,52 @@ The context object allows agents to specify preferences that affect search and d
 | `currency` | string | Preferred price display currency (ISO 4217) | `"USD"`, `"EUR"` |
 | `country` | string | Agent's operating region (ISO 3166-1 alpha-2) | `"US"`, `"GB"` |
 | `intent` | string | Semantic description of search goal | `"find weekly AI newsletters"` |
+
+## Publisher Teasers
+
+Teasers are publisher-authored content previews that give agents enough context to evaluate relevance without requiring full access. Unlike the short `excerpt` (1–2 sentences), a teaser provides a substantial preview — typically the first few hundred words of the post, or a publisher-written summary optimized for agent consumption.
+
+Teasers serve two purposes:
+
+1. **Better search results.** Agents can use teaser content alongside `context.intent` to rank results more accurately.
+2. **Informed decisions.** When an agent encounters paywalled content, the teaser helps it decide whether to recommend the content (and present a checkout URL) to the user.
+
+### Teaser Object
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `text` | string | Preview content (publisher-authored or auto-generated) |
+| `word_count` | integer | Number of words in the teaser |
+| `format` | string | Content format: `text`, `html`, `markdown` (default: `text`) |
+
+```json
+{
+  "teaser": {
+    "text": "The leaked GPT-5 benchmarks reveal significant jumps in reasoning, code generation, and multi-step planning. In this deep dive, we analyze what the numbers actually mean, compare them to Claude 4 and Gemini Ultra, and explore what this signals for the broader AI industry...",
+    "word_count": 150,
+    "format": "text"
+  }
+}
+```
+
+### Teaser Configuration
+
+Publishers control how teasers are generated for their content:
+
+| Setting | Type | Description |
+|---------|------|-------------|
+| `teaser_mode` | string | `manual` (publisher writes each teaser) or `auto` (server generates from content) |
+| `teaser_word_count` | integer | Default word count for auto-generated teasers (default: 150) |
+
+When `teaser_mode` is `auto`, the server extracts the first *N* words of the post content as the teaser. Publishers can override the auto-generated teaser on a per-post basis by providing a manually authored teaser.
+
+### Guidelines
+
+- Publishers **SHOULD** provide teasers for paywalled content to maximize agent discoverability
+- Publishers **MAY** use auto-generated teasers (first *N* words) or manually author them
+- Servers **MUST** include teasers in catalog search results and lookup responses when available
+- Servers **SHOULD** include teasers in [Content Access](content-access.md) 402 responses
+- Agents **SHOULD** use teaser content alongside `context.intent` to improve result ranking
 
 ## Extensions
 

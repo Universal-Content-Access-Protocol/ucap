@@ -98,7 +98,12 @@ For simple lookups with optional query parameters.
           {
             "id": "post_xyz789",
             "title": "GPT-5: What We Know So Far",
-            "excerpt": "An analysis of the leaked benchmarks and what they mean...",
+            "excerpt": "An analysis of the leaked benchmarks and what they mean.",
+            "teaser": {
+              "text": "The leaked GPT-5 benchmarks reveal significant jumps in reasoning, code generation, and multi-step planning. In this deep dive, we analyze what the numbers actually mean, compare them to Claude 4 and Gemini Ultra, and explore what this signals for the broader AI industry...",
+              "word_count": 150,
+              "format": "text"
+            },
             "published_at": "2026-02-05T10:00:00Z",
             "min_tier": "tier_pro",
             "reading_time_minutes": 12
@@ -106,7 +111,12 @@ For simple lookups with optional query parameters.
           {
             "id": "post_xyz788",
             "title": "Weekly AI News Roundup #208",
-            "excerpt": "This week: Claude 4, Gemini updates, and more...",
+            "excerpt": "This week: Claude 4, Gemini updates, and more.",
+            "teaser": {
+              "text": "This week in AI: Claude 4 launches with improved agentic capabilities, Google announces Gemini 2.5 with native tool use, and Meta open-sources a new 400B parameter model. Plus, the EU AI Act enforcement begins, and we look at three startups building novel agent frameworks...",
+              "word_count": 150,
+              "format": "text"
+            },
             "published_at": "2026-02-03T10:00:00Z",
             "min_tier": "tier_free",
             "reading_time_minutes": 5
@@ -163,7 +173,12 @@ For lookups with full context support.
         "id": "post_xyz789",
         "external_id": "patreon:post_98765",
         "title": "GPT-5: What We Know So Far",
-        "excerpt": "An analysis of the leaked benchmarks and what they mean for the industry...",
+        "excerpt": "An analysis of the leaked benchmarks and what they mean for the industry.",
+        "teaser": {
+          "text": "The leaked GPT-5 benchmarks reveal significant jumps in reasoning, code generation, and multi-step planning. In this deep dive, we analyze what the numbers actually mean, compare them to Claude 4 and Gemini Ultra, and explore what this signals for the broader AI industry...",
+          "word_count": 150,
+          "format": "text"
+        },
         "published_at": "2026-02-05T10:00:00Z",
         "updated_at": "2026-02-05T14:30:00Z",
         "min_tier": {
@@ -248,6 +263,7 @@ Following UCP convention, `NOT_FOUND` returns HTTP 200 with an error message (no
 - Servers **SHOULD** support lookup by slug (`slug:*`)
 - Servers **MAY** support lookup by external platform IDs (`patreon:*`, `ghost:*`)
 - Servers **SHOULD** return `recent_posts` for publication lookups
+- Servers **SHOULD** include [teasers](catalog.md#publisher-teasers) in post and recent_posts responses when available
 - Servers **MUST** follow UCP error handling convention (200 with messages, not 404)
 
 ### For Agents
