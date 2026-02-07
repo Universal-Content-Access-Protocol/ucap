@@ -13,7 +13,7 @@ theme:
   name: material
   custom_dir: docs/overrides
   logo: assets/ucap-logo.png
-  favicon: assets/ucap-logo.png
+  favicon: assets/ucap-favicon.png
   font:
     text: Google Sans
     code: Roboto Mono
