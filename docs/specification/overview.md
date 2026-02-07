@@ -17,15 +17,26 @@ The key words **MUST**, **MUST NOT**, **REQUIRED**, **SHALL**, **SHALL NOT**, **
 
 ## Protocol Capabilities
 
-UCAP defines five core capabilities, following the composable pattern from [UCP](https://github.com/Universal-Commerce-Protocol/ucp){ target="_blank" }:
+UCAP defines five capabilities. Four are new, purpose-built for content access. One — Subscription — is a [UCP extension](https://ucp.dev/latest/specification/overview/){ target="_blank" } that builds on UCP's existing Checkout capability.
+
+#### UCAP-Native Capabilities
+
+These are new capabilities defined by UCAP:
 
 | Capability | ID | Description |
 |---|---|---|
 | [Content Access](content-access.md) | `dev.ucap.content.access` | Fetch published content with automatic entitlement checking |
 | [Catalog Search](catalog-search.md) | `dev.ucap.content.catalog.search` | Free-text search across publishers and posts |
 | [Catalog Lookup](catalog-lookup.md) | `dev.ucap.content.catalog.lookup` | Direct lookup by publication or post ID |
-| [Subscription](subscription.md) | `dev.ucap.content.subscription` | Subscribe to publishers and manage entitlements |
 | [Identity Linking](identity-linking.md) | `dev.ucap.content.identity` | Link agent identity to user identity via OAuth |
+
+#### UCP Extension
+
+This capability extends [UCP's Checkout](https://ucp.dev/latest/specification/checkout/){ target="_blank" }, inheriting its payment flow and augmenting it with subscription-specific fields:
+
+| Capability | ID | Extends | Description |
+|---|---|---|---|
+| [Subscription](subscription.md) | `dev.ucap.content.subscription` | `dev.ucp.shopping.checkout` | Recurring content subscriptions with entitlement management |
 
 ### Capability Design
 

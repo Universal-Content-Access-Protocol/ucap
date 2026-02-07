@@ -5,7 +5,7 @@ description: Understand UCAP's design goals, roles, terminology, content access 
 
 # Core Concepts
 
-The Universal Content Access Protocol (UCAP) is an open protocol that enables AI agents and automated systems to discover, access, and subscribe to long-form content from publishers. Built on HTTP with [RFC 9421 HTTP Message Signatures](https://datatracker.ietf.org/doc/html/rfc9421){ target="_blank" } for agent authentication, UCAP provides a standardized way for agents to interact with paywalled content, handle subscription purchases, and access entitled content — all while keeping humans in control of payment decisions.
+The Universal Content Access Protocol (UCAP) is an open protocol that enables AI agents and automated systems to discover, access, and subscribe to long-form content from publishers. UCAP builds on top of the [Universal Commerce Protocol (UCP)](https://ucp.dev){ target="_blank" } — extending UCP's Checkout capability with content subscriptions, and adding new capabilities for content discovery, catalog search, and entitlement-based access. Authentication uses [RFC 9421 HTTP Message Signatures](https://datatracker.ietf.org/doc/html/rfc9421){ target="_blank" }, and humans stay in control of all payment decisions.
 
 ## Problem Statement
 

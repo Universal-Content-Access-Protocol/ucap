@@ -15,9 +15,9 @@ tags:
 
 # Universal Content Access Protocol
 
-The open standard for AI agents to access publisher content.
+The open standard for AI agents to access publisher content. Built on [UCP](https://ucp.dev){ target="_blank" }.
 
-UCAP defines building blocks for agentic content access — from discovering and subscribing to reading paywalled content — allowing the ecosystem to interoperate through one standard, without custom builds.
+UCAP extends the [Universal Commerce Protocol (UCP)](https://ucp.dev){ target="_blank" } with capabilities purpose-built for content access — discovery, catalog search, entitlement-based reading, and subscription management. Where UCP handles commerce, UCAP handles content.
 
 </div>
 <div class="ucap-hero__logo">
