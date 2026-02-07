@@ -1140,7 +1140,7 @@
 <p>A conformant UCAP server <strong>MUST</strong>:</p>
 <ol>
 <li>Implement the Content Access capability (<code>dev.ucap.content.access</code>)</li>
-<li>Verify OpenBotAuth signatures on all requests</li>
+<li>Verify HTTP Message Signatures (<a href="https://datatracker.ietf.org/doc/html/rfc9421" target="_blank">RFC 9421</a>) on all requests</li>
 <li>Return proper <code>402 Payment Required</code> responses with offers for paywalled content</li>
 <li>Support the well-known discovery endpoint (<code>/.well-known/ucap.json</code>)</li>
 </ol>
@@ -1157,7 +1157,6 @@
 <p>A conformant UCAP server <strong>MAY</strong>:</p>
 <ol>
 <li>Implement Identity Linking (<code>dev.ucap.content.identity</code>)</li>
-<li>Support USDC cryptocurrency payments</li>
 <li>Maintain a global publisher registry</li>
 <li>Support content access by original URL</li>
 </ol>
@@ -1165,7 +1164,7 @@
 <h3 id="must-required_1">MUST (Required)<a class="headerlink" href="#must-required_1" title="Permanent link">&para;</a></h3>
 <p>A conformant UCAP agent <strong>MUST</strong>:</p>
 <ol>
-<li>Sign all requests with OpenBotAuth</li>
+<li>Sign all requests per <a href="https://datatracker.ietf.org/doc/html/rfc9421" target="_blank">RFC 9421</a></li>
 <li>Handle <code>402 Payment Required</code> responses gracefully</li>
 <li>Present checkout URLs to humans (not auto-purchase) for Stripe payments</li>
 <li>Respect <code>UCAP-Purpose</code> semantics</li>
@@ -1181,7 +1180,6 @@
 <h3 id="may-optional_1">MAY (Optional)<a class="headerlink" href="#may-optional_1" title="Permanent link">&para;</a></h3>
 <p>A conformant UCAP agent <strong>MAY</strong>:</p>
 <ol>
-<li>Execute USDC payments autonomously when authorized</li>
 <li>Use the <code>intent</code> field in context to improve search relevance</li>
 <li>Cache catalog responses for improved performance</li>
 <li>Support multiple transport bindings (REST, MCP)</li>
@@ -1197,7 +1195,7 @@
 <tbody>
 <tr>
 <td><strong>Basic</strong></td>
-<td>Content Access + OpenBotAuth verification</td>
+<td>Content Access + RFC 9421 signature verification</td>
 </tr>
 <tr>
 <td><strong>Standard</strong></td>

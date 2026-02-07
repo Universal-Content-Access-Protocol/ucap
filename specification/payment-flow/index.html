@@ -857,17 +857,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usdc-payments" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        USDC Payments
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#guidelines" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1176,17 +1165,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usdc-payments" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        USDC Payments
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#guidelines" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1246,7 +1224,7 @@
 
 
 <h1 id="payment-flow">Payment Flow<a class="headerlink" href="#payment-flow" title="Permanent link">&para;</a></h1>
-<p>UCAP uses a human-in-the-loop payment model. Agents cannot execute payments autonomously — except when using cryptocurrency (USDC on Base) where agents can pay directly.</p>
+<p>UCAP uses a human-in-the-loop payment model. Agents facilitate content discovery and present payment options, but humans always authorize and complete payments.</p>
 <h2 id="flow-overview">Flow Overview<a class="headerlink" href="#flow-overview" title="Permanent link">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>┌─────────────────────────────────────────────────────────────────┐
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│                    UCAP Payment Flow                             │
@@ -1313,8 +1291,6 @@
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="p">]</span>
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">}</span>
 </span></code></pre></div>
-<h2 id="usdc-payments">USDC Payments<a class="headerlink" href="#usdc-payments" title="Permanent link">&para;</a></h2>
-<p>For cryptocurrency payments, agents <strong>MAY</strong> execute USDC payments autonomously when authorized. The subscription endpoint returns payment details instead of a checkout URL when <code>payment_method</code> is <code>"usdc"</code>.</p>
 <h2 id="guidelines">Guidelines<a class="headerlink" href="#guidelines" title="Permanent link">&para;</a></h2>
 <h3 id="for-ucap-servers">For UCAP Servers<a class="headerlink" href="#for-ucap-servers" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1325,9 +1301,8 @@
 </ul>
 <h3 id="for-agents">For Agents<a class="headerlink" href="#for-agents" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Agents <strong>MUST</strong> present checkout URLs to humans — not auto-purchase for Stripe payments</li>
+<li>Agents <strong>MUST</strong> present checkout URLs to humans — not auto-purchase</li>
 <li>Agents <strong>MUST</strong> handle the async nature of payment (poll or wait for entitlement)</li>
-<li>Agents <strong>MAY</strong> execute USDC payments autonomously when authorized</li>
 <li>Agents <strong>SHOULD</strong> inform the user about the subscription price before presenting the checkout URL</li>
 </ul>
 

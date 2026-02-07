@@ -1085,7 +1085,7 @@
 </ul>
 <p>Link agent identity to user identity via OAuth 2.0. This enables agents to act on behalf of a specific user, accessing their entitlements and managing their subscriptions.</p>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>Identity linking bridges the gap between agent authentication (OpenBotAuth) and user authorization (OAuth 2.0). Once linked, an agent can make requests that reference a user's entitlements without the user being present.</p>
+<p>Identity linking bridges the gap between agent authentication (RFC 9421 HTTP signatures) and user authorization (OAuth 2.0). Once linked, an agent can make requests that reference a user's entitlements without the user being present.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>┌─────────────────────────────────────────────────────────────┐
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│                  Identity Linking Flow                       │
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├─────────────────────────────────────────────────────────────┤
@@ -1184,7 +1184,7 @@
 <li>Servers <strong>MUST</strong> implement the OAuth 2.0 Authorization Code flow per <a href="https://datatracker.ietf.org/doc/html/rfc6749" target="_blank">RFC 6749</a></li>
 <li>Servers <strong>MUST</strong> support the <code>/.well-known/oauth-authorization-server</code> discovery endpoint</li>
 <li>Servers <strong>SHOULD</strong> support refresh tokens for long-lived agent access</li>
-<li>Servers <strong>MUST</strong> validate both the OpenBotAuth signature and the OAuth bearer token on identity-linked requests</li>
+<li>Servers <strong>MUST</strong> validate both the RFC 9421 HTTP signature and the OAuth bearer token on identity-linked requests</li>
 </ul>
 <h3 id="for-agents">For Agents<a class="headerlink" href="#for-agents" title="Permanent link">&para;</a></h3>
 <ul>

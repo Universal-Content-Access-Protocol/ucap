@@ -1514,7 +1514,7 @@
 <h2 id="guidelines">Guidelines<a class="headerlink" href="#guidelines" title="Permanent link">&para;</a></h2>
 <h3 id="for-ucap-servers">For UCAP Servers<a class="headerlink" href="#for-ucap-servers" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Servers <strong>MUST</strong> verify OpenBotAuth signatures before returning content</li>
+<li>Servers <strong>MUST</strong> verify HTTP Message Signatures (<a href="https://datatracker.ietf.org/doc/html/rfc9421" target="_blank">RFC 9421</a>) before returning content</li>
 <li>Servers <strong>MUST</strong> return 402 with at least one offer for paywalled content</li>
 <li>Servers <strong>SHOULD</strong> include a <code>teaser</code> with title and excerpt in 402 responses</li>
 <li>Servers <strong>SHOULD</strong> include <code>attribution</code> requirements in 200 responses</li>
@@ -1522,7 +1522,7 @@
 </ul>
 <h3 id="for-agents">For Agents<a class="headerlink" href="#for-agents" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Agents <strong>MUST</strong> sign all requests with OpenBotAuth</li>
+<li>Agents <strong>MUST</strong> sign all requests per <a href="https://datatracker.ietf.org/doc/html/rfc9421" target="_blank">RFC 9421</a></li>
 <li>Agents <strong>MUST</strong> handle 402 responses gracefully</li>
 <li>Agents <strong>MUST</strong> present checkout URLs to humans — not auto-purchase</li>
 <li>Agents <strong>SHOULD</strong> include the <code>UCAP-Purpose</code> header</li>

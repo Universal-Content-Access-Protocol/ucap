@@ -1228,7 +1228,7 @@
 <td><code>payment_method</code></td>
 <td>string</td>
 <td>No</td>
-<td>Payment method preference (<code>"stripe"</code>, <code>"usdc"</code>)</td>
+<td>Payment method preference (e.g., <code>"stripe"</code>)</td>
 </tr>
 </tbody>
 </table>
@@ -1334,8 +1334,7 @@
 </ul>
 <h3 id="for-agents">For Agents<a class="headerlink" href="#for-agents" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Agents <strong>MUST</strong> present the checkout URL to the human — not auto-purchase for Stripe payments</li>
-<li>Agents <strong>MAY</strong> execute USDC payments autonomously when authorized</li>
+<li>Agents <strong>MUST</strong> present the checkout URL to the human — not auto-purchase</li>
 <li>Agents <strong>SHOULD</strong> check entitlements before requesting content to avoid unnecessary 402 responses</li>
 </ul>
 

@@ -837,15 +837,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#agent-authentication-openbotauth" class="md-nav__link">
+  <a href="#agent-authentication-http-message-signatures" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Agent Authentication (OpenBotAuth)
+        Agent Authentication (HTTP Message Signatures)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Agent Authentication (OpenBotAuth)">
+    <nav class="md-nav" aria-label="Agent Authentication (HTTP Message Signatures)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1089,15 +1089,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#agent-authentication-openbotauth" class="md-nav__link">
+  <a href="#agent-authentication-http-message-signatures" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Agent Authentication (OpenBotAuth)
+        Agent Authentication (HTTP Message Signatures)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Agent Authentication (OpenBotAuth)">
+    <nav class="md-nav" aria-label="Agent Authentication (HTTP Message Signatures)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1283,8 +1283,8 @@
 <p>This page consolidates authentication details, security considerations, error codes, and format references for the UCAP specification.</p>
 <hr />
 <h2 id="authentication-authorization">Authentication &amp; Authorization<a class="headerlink" href="#authentication-authorization" title="Permanent link">&para;</a></h2>
-<h3 id="agent-authentication-openbotauth">Agent Authentication (OpenBotAuth)<a class="headerlink" href="#agent-authentication-openbotauth" title="Permanent link">&para;</a></h3>
-<p>All UCAP requests <strong>MUST</strong> include OpenBotAuth HTTP signatures per <a href="https://datatracker.ietf.org/doc/html/rfc9421" target="_blank">RFC 9421</a>.</p>
+<h3 id="agent-authentication-http-message-signatures">Agent Authentication (HTTP Message Signatures)<a class="headerlink" href="#agent-authentication-http-message-signatures" title="Permanent link">&para;</a></h3>
+<p>All UCAP requests <strong>MUST</strong> include HTTP Message Signatures per <a href="https://datatracker.ietf.org/doc/html/rfc9421" target="_blank">RFC 9421</a>.</p>
 <h4 id="required-headers">Required Headers<a class="headerlink" href="#required-headers" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
@@ -1320,8 +1320,8 @@
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>(&quot;@method&quot; &quot;@path&quot; &quot;host&quot; &quot;date&quot; &quot;content-type&quot; &quot;content-digest&quot;)
 </span></code></pre></div>
 <h4 id="jwks-resolution">JWKS Resolution<a class="headerlink" href="#jwks-resolution" title="Permanent link">&para;</a></h4>
-<p>UCAP servers resolve agent public keys via the OpenBotAuth JWKS registry:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>https://openbotauth.org/jwks/{agent_id}
+<p>UCAP servers resolve agent public keys via the agent's JWKS endpoint:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>https://{agent_host}/.well-known/jwks.json
 </span></code></pre></div>
 <h3 id="ucap-purpose-header">UCAP-Purpose Header<a class="headerlink" href="#ucap-purpose-header" title="Permanent link">&para;</a></h3>
 <p>Agents <strong>SHOULD</strong> declare their intent using the <code>UCAP-Purpose</code> header:</p>
@@ -1357,7 +1357,7 @@
 <h2 id="security-considerations">Security Considerations<a class="headerlink" href="#security-considerations" title="Permanent link">&para;</a></h2>
 <h3 id="agent-verification">Agent Verification<a class="headerlink" href="#agent-verification" title="Permanent link">&para;</a></h3>
 <ul>
-<li>All agent requests <strong>MUST</strong> include valid OpenBotAuth signatures</li>
+<li>All agent requests <strong>MUST</strong> include valid HTTP Message Signatures per RFC 9421</li>
 <li>Signatures <strong>MUST</strong> be verified against the agent's JWKS</li>
 <li>Replay attacks <strong>MUST</strong> be prevented via nonce/timestamp checking</li>
 </ul>
