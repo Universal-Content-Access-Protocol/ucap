@@ -100,7 +100,6 @@ All HTTP endpoints are prefixed with `/v1/` for the current major version.
 
 - [UCP — Universal Commerce Protocol](https://github.com/Universal-Commerce-Protocol/ucp){ target="_blank" }
 - [RFC 9421 — HTTP Message Signatures](https://datatracker.ietf.org/doc/html/rfc9421){ target="_blank" }
-- [RFC 9421 — HTTP Message Signatures](https://datatracker.ietf.org/doc/html/rfc9421){ target="_blank" }
 - [RFC 6749 — OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749){ target="_blank" }
 - [MCP — Model Context Protocol](https://modelcontextprotocol.io){ target="_blank" }
 - [BCP 47 — Language Tags](https://www.rfc-editor.org/info/bcp47){ target="_blank" }

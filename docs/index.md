@@ -21,7 +21,7 @@ UCAP extends the [Universal Commerce Protocol (UCP)](https://ucp.dev){ target="_
 
 </div>
 <div class="ucap-hero__logo">
-  <img src="assets/ucap-logo.png" alt="UCAP logo" width="600">
+  <img src="assets/ucap-logo.png" alt="UCAP logo" width="450">
 </div>
 </div>
 
