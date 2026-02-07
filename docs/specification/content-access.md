@@ -173,7 +173,7 @@ Retrieve a single piece of content. The server verifies the agent's identity and
 
 ### For UCAP Servers
 
-- Servers **MUST** verify OpenBotAuth signatures before returning content
+- Servers **MUST** verify HTTP Message Signatures ([RFC 9421](https://datatracker.ietf.org/doc/html/rfc9421){ target="_blank" }) before returning content
 - Servers **MUST** return 402 with at least one offer for paywalled content
 - Servers **SHOULD** include a `teaser` with title and excerpt in 402 responses
 - Servers **SHOULD** include `attribution` requirements in 200 responses
@@ -181,7 +181,7 @@ Retrieve a single piece of content. The server verifies the agent's identity and
 
 ### For Agents
 
-- Agents **MUST** sign all requests with OpenBotAuth
+- Agents **MUST** sign all requests per [RFC 9421](https://datatracker.ietf.org/doc/html/rfc9421){ target="_blank" }
 - Agents **MUST** handle 402 responses gracefully
 - Agents **MUST** present checkout URLs to humans — not auto-purchase
 - Agents **SHOULD** include the `UCAP-Purpose` header

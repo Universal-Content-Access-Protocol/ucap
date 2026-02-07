@@ -11,9 +11,9 @@ This page consolidates authentication details, security considerations, error co
 
 ## Authentication & Authorization
 
-### Agent Authentication (OpenBotAuth)
+### Agent Authentication (HTTP Message Signatures)
 
-All UCAP requests **MUST** include OpenBotAuth HTTP signatures per [RFC 9421](https://datatracker.ietf.org/doc/html/rfc9421){ target="_blank" }.
+All UCAP requests **MUST** include HTTP Message Signatures per [RFC 9421](https://datatracker.ietf.org/doc/html/rfc9421){ target="_blank" }.
 
 #### Required Headers
 
@@ -40,10 +40,10 @@ For requests with bodies:
 
 #### JWKS Resolution
 
-UCAP servers resolve agent public keys via the OpenBotAuth JWKS registry:
+UCAP servers resolve agent public keys via the agent's JWKS endpoint:
 
 ```text
-https://openbotauth.org/jwks/{agent_id}
+https://{agent_host}/.well-known/jwks.json
 ```
 
 ### UCAP-Purpose Header
@@ -67,7 +67,7 @@ UCAP-Purpose: summarize
 
 ### Agent Verification
 
-- All agent requests **MUST** include valid OpenBotAuth signatures
+- All agent requests **MUST** include valid HTTP Message Signatures per RFC 9421
 - Signatures **MUST** be verified against the agent's JWKS
 - Replay attacks **MUST** be prevented via nonce/timestamp checking
 

@@ -60,7 +60,7 @@ Initiate a subscription to a publisher's tier. Returns a checkout URL for the hu
 |-------|------|----------|-------------|
 | `publisher_id` | string | Yes | Publisher to subscribe to |
 | `tier_id` | string | Yes | Subscription tier |
-| `payment_method` | string | No | Payment method preference (`"stripe"`, `"usdc"`) |
+| `payment_method` | string | No | Payment method preference (e.g., `"stripe"`) |
 
 ### List Entitlements
 
@@ -124,6 +124,5 @@ Retrieve all active subscriptions for the authenticated agent/user.
 
 ### For Agents
 
-- Agents **MUST** present the checkout URL to the human — not auto-purchase for Stripe payments
-- Agents **MAY** execute USDC payments autonomously when authorized
+- Agents **MUST** present the checkout URL to the human — not auto-purchase
 - Agents **SHOULD** check entitlements before requesting content to avoid unnecessary 402 responses

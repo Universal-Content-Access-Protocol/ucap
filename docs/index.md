@@ -97,7 +97,7 @@ Supports any content platform — Patreon, Ghost, WordPress, Substack, and more.
 
 ### :material-shield-check: Secure by Default
 
-OpenBotAuth HTTP signatures on every request. OAuth 2.0 for user delegation. Rate limiting built in.
+RFC 9421 HTTP Message Signatures on every request. OAuth 2.0 for user delegation. Rate limiting built in.
 
 </div>
 
@@ -177,7 +177,7 @@ OpenBotAuth HTTP signatures on every request. OAuth 2.0 for user delegation. Rat
 
 ### Protocol Stack
 
-UCAP works alongside UCP for payment handling and OpenBotAuth for agent identity verification.
+UCAP works alongside UCP for payment handling and RFC 9421 HTTP Message Signatures for agent identity verification.
 
 ```text
 ┌─────────────────────────────────────────────────────────────┐
@@ -185,8 +185,8 @@ UCAP works alongside UCP for payment handling and OpenBotAuth for agent identity
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
 │   ┌──────────┐    ┌──────────┐    ┌─────────────────┐      │
-│   │   UCAP   │    │   UCP    │    │   OpenBotAuth   │      │
-│   │(Content) │    │(Payments)│    │ (Agent Identity) │      │
+│   │   UCAP   │    │   UCP    │    │   RFC 9421      │      │
+│   │(Content) │    │(Payments)│    │ (HTTP Signatures)│      │
 │   └──────────┘    └──────────┘    └─────────────────┘      │
 │        │               │                  │                 │
 │        └───────────────┴──────────────────┘                 │

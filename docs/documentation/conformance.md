@@ -14,7 +14,7 @@ This section defines the requirements for conformant UCAP servers and agents.
 A conformant UCAP server **MUST**:
 
 1. Implement the Content Access capability (`dev.ucap.content.access`)
-2. Verify OpenBotAuth signatures on all requests
+2. Verify HTTP Message Signatures ([RFC 9421](https://datatracker.ietf.org/doc/html/rfc9421){ target="_blank" }) on all requests
 3. Return proper `402 Payment Required` responses with offers for paywalled content
 4. Support the well-known discovery endpoint (`/.well-known/ucap.json`)
 
@@ -33,8 +33,7 @@ A conformant UCAP server **SHOULD**:
 A conformant UCAP server **MAY**:
 
 1. Implement Identity Linking (`dev.ucap.content.identity`)
-2. Support USDC cryptocurrency payments
-3. Maintain a global publisher registry
+2. Maintain a global publisher registry
 4. Support content access by original URL
 
 ## Agent Conformance
@@ -43,7 +42,7 @@ A conformant UCAP server **MAY**:
 
 A conformant UCAP agent **MUST**:
 
-1. Sign all requests with OpenBotAuth
+1. Sign all requests per [RFC 9421](https://datatracker.ietf.org/doc/html/rfc9421){ target="_blank" }
 2. Handle `402 Payment Required` responses gracefully
 3. Present checkout URLs to humans (not auto-purchase) for Stripe payments
 4. Respect `UCAP-Purpose` semantics
@@ -61,8 +60,7 @@ A conformant UCAP agent **SHOULD**:
 
 A conformant UCAP agent **MAY**:
 
-1. Execute USDC payments autonomously when authorized
-2. Use the `intent` field in context to improve search relevance
+1. Use the `intent` field in context to improve search relevance
 3. Cache catalog responses for improved performance
 4. Support multiple transport bindings (REST, MCP)
 
@@ -70,6 +68,6 @@ A conformant UCAP agent **MAY**:
 
 | Level | Requirements |
 |-------|-------------|
-| **Basic** | Content Access + OpenBotAuth verification |
+| **Basic** | Content Access + RFC 9421 signature verification |
 | **Standard** | Basic + Catalog Search + Catalog Lookup |
 | **Full** | Standard + Subscription + Identity Linking + MCP |

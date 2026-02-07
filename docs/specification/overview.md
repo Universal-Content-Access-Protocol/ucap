@@ -88,7 +88,7 @@ All HTTP endpoints are prefixed with `/v1/` for the current major version.
 ## References
 
 - [UCP — Universal Commerce Protocol](https://github.com/Universal-Commerce-Protocol/ucp){ target="_blank" }
-- [OpenBotAuth](https://github.com/OpenBotAuth/openbotauth){ target="_blank" }
+- [RFC 9421 — HTTP Message Signatures](https://datatracker.ietf.org/doc/html/rfc9421){ target="_blank" }
 - [RFC 9421 — HTTP Message Signatures](https://datatracker.ietf.org/doc/html/rfc9421){ target="_blank" }
 - [RFC 6749 — OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749){ target="_blank" }
 - [MCP — Model Context Protocol](https://modelcontextprotocol.io){ target="_blank" }

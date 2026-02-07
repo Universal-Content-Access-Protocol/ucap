@@ -1,11 +1,11 @@
 ---
 title: Core Concepts
-description: Understand UCAP's design goals, roles, terminology, content access model, and how it fits into the protocol stack alongside UCP and OpenBotAuth.
+description: Understand UCAP's design goals, roles, terminology, content access model, and how it fits into the protocol stack alongside UCP and RFC 9421 HTTP signatures.
 ---
 
 # Core Concepts
 
-The Universal Content Access Protocol (UCAP) is an open protocol that enables AI agents and automated systems to discover, access, and subscribe to long-form content from publishers. Built on HTTP with OpenBotAuth for agent authentication, UCAP provides a standardized way for agents to interact with paywalled content, handle subscription purchases, and access entitled content — all while keeping humans in control of payment decisions.
+The Universal Content Access Protocol (UCAP) is an open protocol that enables AI agents and automated systems to discover, access, and subscribe to long-form content from publishers. Built on HTTP with [RFC 9421 HTTP Message Signatures](https://datatracker.ietf.org/doc/html/rfc9421){ target="_blank" } for agent authentication, UCAP provides a standardized way for agents to interact with paywalled content, handle subscription purchases, and access entitled content — all while keeping humans in control of payment decisions.
 
 ## Problem Statement
 
@@ -36,7 +36,7 @@ An automated system — AI assistant, bot, or script — that accesses content o
 
 **Responsibilities:**
 
-- Authenticate via OpenBotAuth HTTP signatures
+- Authenticate via HTTP Message Signatures ([RFC 9421](https://datatracker.ietf.org/doc/html/rfc9421){ target="_blank" })
 - Discover and search for content via the Catalog capability
 - Request content and handle entitlement responses
 - Present checkout URLs to humans when payment is required
@@ -72,7 +72,7 @@ A service implementing the UCAP specification that mediates between agents and p
 
 **Responsibilities:**
 
-- Verify agent authentication (OpenBotAuth signatures)
+- Verify agent authentication (RFC 9421 HTTP signatures)
 - Check entitlements and return content or offers
 - Manage subscriptions and payment sessions
 - Maintain the content catalog
@@ -86,7 +86,7 @@ A service implementing the UCAP specification that mediates between agents and p
 
 ## Protocol Stack
 
-UCAP is designed to work alongside [UCP (Universal Commerce Protocol)](https://github.com/Universal-Commerce-Protocol/ucp){ target="_blank" } for payment handling and [OpenBotAuth](https://github.com/OpenBotAuth/openbotauth){ target="_blank" } for agent identity verification.
+UCAP is designed to work alongside [UCP (Universal Commerce Protocol)](https://github.com/Universal-Commerce-Protocol/ucp){ target="_blank" } for payment handling and [RFC 9421 HTTP Message Signatures](https://datatracker.ietf.org/doc/html/rfc9421){ target="_blank" } for agent identity verification.
 
 ```text
 ┌─────────────────────────────────────────────────────────────┐
@@ -94,8 +94,8 @@ UCAP is designed to work alongside [UCP (Universal Commerce Protocol)](https://g
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
 │   ┌──────────┐    ┌──────────┐    ┌─────────────────┐      │
-│   │   UCAP   │    │   UCP    │    │   OpenBotAuth   │      │
-│   │(Content) │    │(Payments)│    │ (Agent Identity) │      │
+│   │   UCAP   │    │   UCP    │    │   RFC 9421      │      │
+│   │(Content) │    │(Payments)│    │ (HTTP Signatures)│      │
 │   └──────────┘    └──────────┘    └─────────────────┘      │
 │        │               │                  │                 │
 │        └───────────────┴──────────────────┘                 │

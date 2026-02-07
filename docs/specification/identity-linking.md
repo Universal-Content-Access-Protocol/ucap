@@ -11,7 +11,7 @@ Link agent identity to user identity via OAuth 2.0. This enables agents to act o
 
 ## Overview
 
-Identity linking bridges the gap between agent authentication (OpenBotAuth) and user authorization (OAuth 2.0). Once linked, an agent can make requests that reference a user's entitlements without the user being present.
+Identity linking bridges the gap between agent authentication (RFC 9421 HTTP signatures) and user authorization (OAuth 2.0). Once linked, an agent can make requests that reference a user's entitlements without the user being present.
 
 ```text
 ┌─────────────────────────────────────────────────────────────┐
@@ -81,7 +81,7 @@ Identity linking bridges the gap between agent authentication (OpenBotAuth) and 
 - Servers **MUST** implement the OAuth 2.0 Authorization Code flow per [RFC 6749](https://datatracker.ietf.org/doc/html/rfc6749){ target="_blank" }
 - Servers **MUST** support the `/.well-known/oauth-authorization-server` discovery endpoint
 - Servers **SHOULD** support refresh tokens for long-lived agent access
-- Servers **MUST** validate both the OpenBotAuth signature and the OAuth bearer token on identity-linked requests
+- Servers **MUST** validate both the RFC 9421 HTTP signature and the OAuth bearer token on identity-linked requests
 
 ### For Agents
 

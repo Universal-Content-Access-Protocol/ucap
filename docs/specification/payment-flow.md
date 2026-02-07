@@ -5,7 +5,7 @@ description: UCAP human-in-the-loop payment flow — how agents present checkout
 
 # Payment Flow
 
-UCAP uses a human-in-the-loop payment model. Agents cannot execute payments autonomously — except when using cryptocurrency (USDC on Base) where agents can pay directly.
+UCAP uses a human-in-the-loop payment model. Agents facilitate content discovery and present payment options, but humans always authorize and complete payments.
 
 ## Flow Overview
 
@@ -93,10 +93,6 @@ UCAP servers **MAY** use [UCP](https://github.com/Universal-Commerce-Protocol/uc
 }
 ```
 
-## USDC Payments
-
-For cryptocurrency payments, agents **MAY** execute USDC payments autonomously when authorized. The subscription endpoint returns payment details instead of a checkout URL when `payment_method` is `"usdc"`.
-
 ## Guidelines
 
 ### For UCAP Servers
@@ -108,7 +104,6 @@ For cryptocurrency payments, agents **MAY** execute USDC payments autonomously w
 
 ### For Agents
 
-- Agents **MUST** present checkout URLs to humans — not auto-purchase for Stripe payments
+- Agents **MUST** present checkout URLs to humans — not auto-purchase
 - Agents **MUST** handle the async nature of payment (poll or wait for entitlement)
-- Agents **MAY** execute USDC payments autonomously when authorized
 - Agents **SHOULD** inform the user about the subscription price before presenting the checkout URL

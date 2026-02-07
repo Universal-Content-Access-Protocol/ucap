@@ -118,8 +118,7 @@ Maps to: `dev.ucap.content.subscription`
 ```yaml
 name: subscribe
 description: >
-  Subscribe to a publisher (returns checkout URL for human
-  or USDC payment details)
+  Subscribe to a publisher (returns checkout URL for human payment)
 inputSchema:
   type: object
   properties:
@@ -129,7 +128,7 @@ inputSchema:
       type: string
     payment_method:
       type: string
-      enum: ["stripe", "usdc"]
+      enum: ["stripe"]
       description: Payment method preference
   required: [publisher_id, tier_id]
 ```
@@ -161,7 +160,7 @@ async def ucap_read(publisher_id: str, post_id: str) -> dict:
     """MCP tool wraps HTTP API"""
     response = await http_client.get(
         f"https://api.ucap.example/v1/content/{publisher_id}/{post_id}",
-        headers=sign_request_with_openbotauth()
+        headers=sign_request_with_http_signatures()
     )
 
     if response.status == 402:
@@ -183,7 +182,7 @@ async def ucap_read(publisher_id: str, post_id: str) -> dict:
 
 - Servers **MAY** expose capabilities as MCP tools
 - MCP tools **SHOULD** be thin wrappers around the HTTP API
-- Servers **MUST** still verify OpenBotAuth signatures for MCP-originated requests
+- Servers **MUST** still verify RFC 9421 HTTP signatures for MCP-originated requests
 - Servers **SHOULD** document which MCP tools are available in their discovery endpoint
 
 ### For Agents
